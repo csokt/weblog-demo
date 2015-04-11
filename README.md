@@ -13,10 +13,10 @@ $ npm install weblog-demo
 Add user to the adm group:
 
 ```bash
-$ usermod -a -G adm username
+$ usermod -a -G adm <username>
 ```
 
-## Using
+## How to use
 
 ```bash
 $ cd node_modules/weblog-demo/

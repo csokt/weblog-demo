@@ -2,6 +2,7 @@
 /* global console */
 /* global __dirname */
 
+// In production you may use Crossbar.io
 var Router = require('wamp.rt')
 new Router(
   { port: 8080,
@@ -12,6 +13,7 @@ new Router(
   }
 )
 
+// Static web server, or simply open the index.html file
 var connect = require('connect')
 var serveStatic = require('serve-static')
 connect().use(serveStatic(__dirname + '/node_modules/weblog-frontend/build')).listen(3000)
@@ -34,6 +36,7 @@ function spawn(proc) {
   child.start()
 }
 
+// Write your own modules using this samples
 spawn('authlog')
 spawn('syslog')
 spawn('apache')
