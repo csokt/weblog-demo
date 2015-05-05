@@ -23,7 +23,7 @@ var forever = require('forever-monitor')
 
 function spawn(proc) {
 
-  var child = new (forever.Monitor)(__dirname + '/node_modules/weblog-backend/' + proc + '.js', {
+  var child = new (forever.Monitor)(__dirname + '/' + proc + '.js', {
     max: 3,
     silent: true,
     args: []
@@ -40,5 +40,3 @@ function spawn(proc) {
 spawn('authlog')
 spawn('syslog')
 spawn('apache')
-spawn('chinook')
-spawn('syslogng')
